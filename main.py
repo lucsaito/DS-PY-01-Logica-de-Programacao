@@ -1,6 +1,6 @@
 from random import choice
 
-vocabulario = ["gato", "sapato", "feliz", "paralelepipedo", "fortaleza"]
+vocabulario = ["canjica", "lagosta", "caju", "buchada", "fortaleza", "cachaça", "rapadura"]
 
 palavra = choice(vocabulario)
 
@@ -11,7 +11,7 @@ chances = 5
 alfabeto = ("abdcefghijklmnopqrstuvwxyz")
 tentativas = []
 
-while True:
+while chances !=0:
     print(f'Sua lista de tentativas é: {tentativas}')
     print("Chances restantes: ", chances)
     impressao =""
@@ -50,7 +50,6 @@ while True:
     if chances == 0 :
         print("Perdeu...\nFIM DO JOGO")
         print(f'Suas tentativas foram: {tentativas}')
-        break
+
     elif set(palavra).issubset(tentativas):
         print(f"\nParabéns, você acertou! A palavra correta é: {palavra.upper()}")
-        break
