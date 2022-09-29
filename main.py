@@ -8,7 +8,7 @@ print("\nJOGO DA FORCA\n")
 
 
 chances = 5
-alfabeto = ("abdcefghijklmnopqrstuvwxyz")
+alfabeto = ("abdcefghijklmnopqrstuvwxyzç")
 tentativas = []
 
 while chances !=0:
@@ -53,3 +53,4 @@ while chances !=0:
 
     elif set(palavra).issubset(tentativas):
         print(f"\nParabéns, você acertou! A palavra correta é: {palavra.upper()}")
+        break
