@@ -69,16 +69,9 @@ def carrega_palavra_secreta():
             tema_valido = False
         
     return palavra_secreta
-def caracteres_especiais(palavra):
-    caracteres = ['.', ',', '&', ':']
-    for i in palavra:
-        if i == caracteres:
-            return [i for i in palavra]
-        else:
-            pass
 
 def iniciando_letras_certas(palavra):
-    return ["_" if re.findall('[A-Z]', index) else index for index in palavra]
+    return ["_" if re.findall('[A-Z]' or '[0-9]', index) else index for index in palavra]
 
 
 def pedindo_chute():
