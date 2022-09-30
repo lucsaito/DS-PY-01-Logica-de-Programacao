@@ -20,7 +20,6 @@ def carrega_palavra_secreta():
             with open("bl.txt", "r", encoding="utf-8") as arquivo:
                 for linha in arquivo:
                     linha = linha.strip()
-                    linha = linha.replace(' ', '')
                     palavras.append(linha)
 
             numero = random.randrange(0, len(palavras))
@@ -32,7 +31,6 @@ def carrega_palavra_secreta():
             with open("kdrama.txt", "r", encoding="utf-8") as arquivo:
                 for linha in arquivo:
                     linha = linha.strip()
-                    linha = linha.replace(' ', '')
                     palavras.append(linha)
 
             numero = random.randrange(0, len(palavras))
@@ -44,7 +42,6 @@ def carrega_palavra_secreta():
             with open("cdrama.txt", "r", encoding="utf-8") as arquivo:
                 for linha in arquivo:
                     linha = linha.strip()
-                    linha = linha.replace(' ', '')
                     palavras.append(linha)
 
             numero = random.randrange(0, len(palavras))
@@ -56,7 +53,6 @@ def carrega_palavra_secreta():
             with open("lakorns.txt", "r", encoding="utf-8") as arquivo:
                 for linha in arquivo:
                     linha = linha.strip()
-                    linha = linha.replace(' ', '')
                     palavras.append(linha)
 
             numero = random.randrange(0, len(palavras))
@@ -71,7 +67,7 @@ def carrega_palavra_secreta():
     return palavra_secreta
 
 def iniciando_letras_certas(palavra):
-    return ["_" if re.findall('[A-Z]' or '[0-9]', index) else index for index in palavra]
+    return ["_" if re.findall('[A-Z]', index) else '_' if re.findall ('[0-9]', index) else index for index in palavra]
 
 
 def pedindo_chute():
@@ -156,7 +152,7 @@ def jogar():
     erros = 0
     letras_faltando = len(letras_certas)
 
-    print(letras_certas)
+    print(''.join(letras_certas))
     while (not acertou and not enforcou):
 
         chute = pedindo_chute()
@@ -168,7 +164,7 @@ def jogar():
                 print(f"PARABÉNS!! Você encontrou todas as letras formando a palavra '{palavra_secreta.upper()}'")
         else:
             erros += 1
-            print(letras_certas)
+            print(''.join(letras_certas))
             print(f'Ainda faltam acertar {letras_faltando} letras')
             print(f'Você ainda tem {7-erros} tentativas')
             desenhando_forca(erros)
@@ -176,7 +172,7 @@ def jogar():
         enforcou = erros == 7
         acertou = "_" not in letras_certas
 
-        print(letras_certas)
+        print(''.join(letras_certas))
 
     if (acertou):
         mensagem_vencedor()
