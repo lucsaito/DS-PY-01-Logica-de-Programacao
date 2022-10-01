@@ -8,7 +8,7 @@ print("\nJOGO DA FORCA\n")
 
 
 chances = 5
-alfabeto = ("abdcefghijklmnopqrstuvwxyzç")
+alfabeto = ("abdcefghijklmnopqrstuvwxyzçáãâéêàòúíñ")
 tentativas = []
 
 while chances !=0:
