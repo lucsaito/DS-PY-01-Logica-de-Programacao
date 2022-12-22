@@ -1,4 +1,3 @@
-# [DS-PY-001] - Lógica de Programação (PY)
 ## Projeto: Hangman (Jogo da forca)
 
 **Objetivos:**
@@ -16,21 +15,3 @@ Caso o usuário adivinhe a palavra inteira, imprimir uma mensagem de vitória.
 
 **Exemplo:**
 Palavra escolhida "Churrasqueira", se o usuário escrever a letra "a" no `input()`, você deve mostrar da seguinte forma: ```_____A______A```. Se em seguida o usuário digitar a letra "r", teremos que imprimir:	```___RRA______RA```. E assim por diante até o usuário adivinhar a palavra, ou até as tentativas acabarem e o usuário perder.
-
-## Instruções de envio
-### 1. Fork do repositório
-Agora que você tem sua própria conta no GitHub, voce poderá "bifurcar"(**fork**) este repositório. Um **fork** cria uma cópia de um repositório do GitHub em sua própria conta do GitHub. Assim, você tem pode fazer alterações no conteúdo do repositório copiado sem alterar o original.
-
-![](images/fork-screen.png)
-
-Após clicar em `fork`, você será levado para uma nova página para a criação do repositório. Mantenha o mesmo nome do repositório a ser copiado e você terá a seguinte URL para acessar seu novo repositório:
-
-```
-https://github.com/<seu GitHub ID>/DS-PY-01-Logica-de-Programacao
-```
-Pronto! Agora você já pode adicionar seu código no `main.py`!
-
-### 2. Pull request
-Após finalizar seu código e adicioná-lo ao repositório de fork criado, você agora deve criar um `pull request` da seguinte maneira:
-Clique no botão "New pull request" sinalizado abaixo e dê um nome para esse pull request, ex: "Projeto Hangman".
-![](images/pull-request.png)
